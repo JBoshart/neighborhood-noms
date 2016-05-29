@@ -1,6 +1,14 @@
 class UsersController < ApplicationController
   before_action :require_login, only: [:show, :edit, :update]
 
+  def index
+    if !current_user.nil?
+      render :show
+    else
+      redirect_to login_path
+    end
+  end
+
   # Create new user shell for form
   def new
     @user = User.new
@@ -39,6 +47,6 @@ class UsersController < ApplicationController
   private
 
   def user_create_params
-    params.permit(user: [:user_name, :name, :email, :password, :password_confirmation, :address, :city, :state, :zip])
+    params.permit(user: [:email, :password, :password_confirmation, :name, :address, :city, :state, :zip])
   end
 end
