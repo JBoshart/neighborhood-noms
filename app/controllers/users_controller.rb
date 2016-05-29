@@ -26,8 +26,9 @@ class UsersController < ApplicationController
 
   # Show user profile page, with maps and badges
   def show
-    @maps = Map.find_by(user_id: current_user.id)
-    @badges = Badge.find_by(id: current_user.badge_ids)
+    #currently commented out because these tables are empty
+    #@maps = Map.find_by(user_id: current_user.id)
+    #@badges = Badge.where(id: current_user.badge_ids)
     render :show
   end
 
@@ -47,6 +48,6 @@ class UsersController < ApplicationController
   private
 
   def user_create_params
-    params.permit(user: [:email, :password, :password_confirmation, :name, :address, :city, :state, :zip])
+    params.permit(user: [:email, :password, :password_confirmation, :name, :address, :street, :city, :state, :zip])
   end
 end
