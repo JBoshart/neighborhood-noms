@@ -4,7 +4,7 @@ Rails.application.routes.draw do
 
   resources :sessions, :only => [:create]
   get    "/login"  => "sessions#new", as: :login
-  delete "/logout" => "sessions#destroy", as: :logout
+  get "/logout" => "sessions#destroy", as: :logout
 
   resources :users
   resources :maps

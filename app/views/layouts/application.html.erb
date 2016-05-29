@@ -6,6 +6,14 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
+<header>
+  <!-- THIS WILL BE A NAV BAR EVENTUALLY -->
+  <% if current_user %>
+    <%= link_to "Logout", logout_path %>
+  <% end %>
+</header>
+
 <body>
 
 <%= yield %>
