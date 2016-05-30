@@ -48,6 +48,6 @@ class UsersController < ApplicationController
   private
 
   def user_create_params
-    params.permit(user: [:email, :password, :password_confirmation, :name, :address, :street, :city, :state, :zip])
+    params.permit(user: [:email, :password, :password_confirmation, :name, :neighborhood, :address, :street, :city, :state, :zip])
   end
 end

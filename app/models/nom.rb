@@ -1,17 +1,15 @@
 class Nom < ActiveRecord::Base
-  belongs_to :map
 
   YELP = Yelp::Client.new({ consumer_key: ENV["YELP_CONSUMER_KEY"],
                               consumer_secret: ENV["YELP_CONSUMER_SECRET"],
                               token: ENV["YELP_TOKEN"],
                               token_secret: ENV["YELP_TOKEN_SECRET"]})
 
-  attr_reader :business_id, :name, :url, :image_url, :rating_img_url, :phone, :rating
+  attr_reader :name, :phone, :address, :city, :zip, :neighborhood, :url, :image_url, :rating_value, :rating_img_url, :map_id
 
   def initialize(restaurant_info)
     #Might be nice to add:
       #restaurant_info.businesses.categories (Array of Arrays)
-      #
     @name = restaurant_info.name
     @phone = restaurant_info.phone
     @address = restaurant_info.location.address.first
@@ -29,8 +27,7 @@ class Nom < ActiveRecord::Base
 
     noms = []
     restaurants.businesses.each do |restaurant|
-      noms << self.new(restaurant) unless restaurant.is_closed == true
-    raise
+      noms << Nom.new(restaurant) unless restaurant.is_closed == true
     end
   end
 end

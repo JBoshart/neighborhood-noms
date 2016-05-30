@@ -1,0 +1,28 @@
+#<Yelp::Response::Model::Business:0x007fc916700b98
+@is_claimed=true,
+@rating=4.5, @mobile_url="http://m.yelp.com/biz/stock-seattle?utm_campaign=yelp_api&utm_medium=api_v2_search&utm_source=b_Aa35rht3Rtzx3S30O5cw",
+@rating_img_url="https://s3-media2.fl.yelpcdn.com/assets/2/www/img/99493c12711e/ico/stars/v1/stars_4_half.png",
+@review_count=47,
+@name="Stock",
+@rating_img_url_small="https://s3-media2.fl.yelpcdn.com/assets/2/www/img/a5221e66bc70/ico/stars/v1/stars_small_4_half.png",
+@url="http://www.yelp.com/biz/stock-seattle?utm_campaign=yelp_api&utm_medium=api_v2_search&utm_source=b_Aa35rht3Rtzx3S30O5cw",
+@categories=[["Vietnamese", "vietnamese"], ["Comfort Food", "comfortfood"], ["Soup", "soup"]],
+@phone="2064023281",
+@snippet_text="Incredible. \n\nI'm feeling 'under the weather' today & thought Pho was the answer ;-)  found Stock on Yelp Hot New List, near my house, & they are open 8AM -...",
+@image_url="https://s3-media1.fl.yelpcdn.com/bphoto/z7ptYWFz06hMiTeqkjmg1w/ms.jpg",
+@snippet_image_url="http://s3-media4.fl.yelpcdn.com/photo/TZFhO29JT-fr5qcY1tldHw/ms.jpg",
+@display_phone="+1-206-402-3281",
+@rating_img_url_large="https://s3-media4.fl.yelpcdn.com/assets/2/www/img/9f83790ff7f6/ico/stars/v1/stars_large_4_half.png", 
+@id="stock-seattle",
+@is_closed=false,
+
+@location=#<Yelp::Response::Model::Location:0x007fc9167008a0
+@city="Seattle",
+@display_address=["500 NW 65th St", "Phinney Ridge", "Seattle, WA 98117"],
+@geo_accuracy=8.0,
+@neighborhoods=["Phinney Ridge"],
+@postal_code="98117",
+@country_code="US",
+@address=["500 NW 65th St"],
+
+@coordinate=#<Yelp::Response::Model::Coordinate:0x007fc9167006e8 @latitude=47.6761399, @longitude=-122.36281>, @state_code="WA", @cross_streets="N 5th Ave">, @deals=nil, @gift_certificates=nil, @reviews=nil>

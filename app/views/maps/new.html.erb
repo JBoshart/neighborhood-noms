@@ -1,9 +1,17 @@
 <h1>Create a new passport map!</h1>
-Would you like a map for your zip code or street?
+Would you like a map for your zip code, neighborhood, or street?
 <%= form_tag maps_path, method: :post do %>
   <%= label_tag :'Zip Code!' %>
   <%= radio_button_tag(:zip, "Zip Code") %>
+
+  <%= label_tag :'Neighborhood!' %>
+  <%= radio_button_tag(:neighborhood, "Neighborhood") %>
+
   <%= label_tag :'Street!' %>
   <%= radio_button_tag(:street, "Street") %>
+
+  <%= label_tag :limit %>
+  <%= number_field_tag :limit, 5, min: 0, max: 20 %>
+
   <%= submit_tag :'Make It!' %>
   <% end %>
