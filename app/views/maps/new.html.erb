@@ -1,4 +1,9 @@
-<h1>Create a new map for your street or zipcode:</h1>
+<h1>Create a new passport map!</h1>
+Would you like a map for your zip code or street?
 <%= form_tag maps_path, method: :post do %>
-  <%= label_tag :'PROPER LABEL HERE' %>
-  <%= text_field_tag :find_music %>
+  <%= label_tag :'Zip Code!' %>
+  <%= radio_button_tag(:zip, "Zip Code") %>
+  <%= label_tag :'Street!' %>
+  <%= radio_button_tag(:street, "Street") %>
+  <%= submit_tag :'Make It!' %>
+  <% end %>

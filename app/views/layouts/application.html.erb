@@ -11,6 +11,8 @@
   <!-- THIS WILL BE A NAV BAR EVENTUALLY -->
   <% if current_user %>
     <%= link_to "Logout", logout_path %>
+    <%= link_to "View My Profile", user_path(current_user.id) %>
+    <%= link_to "Make a New Passport", new_map_path %>
   <% end %>
 </header>
 
