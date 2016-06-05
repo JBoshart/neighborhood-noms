@@ -30,6 +30,5 @@ class Nom < ActiveRecord::Base
       noms << Nom.new(restaurant) unless restaurant.is_closed == true
     end
     return noms
-    raise
   end
 end
