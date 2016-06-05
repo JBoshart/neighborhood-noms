@@ -25,7 +25,7 @@ class MapsController < ApplicationController
       @search = Nom.search(current_user.city, current_user.neighborhood)
       @noms = []
       @search.each do |nom|
-        nom.location.neighborhoods.each do |neighborhood|
+        nom.neighborhood.each do |neighborhood|
           if neighborhood.downcase.include?("#{current_user.neighborhood.downcase}")
             @noms << nom
           end
@@ -34,7 +34,7 @@ class MapsController < ApplicationController
     end
 
     @new_noms = []
-    @new_noms << @noms.sample(params[:limit])
+    @new_noms << @noms.sample(params[:limit].to_i) unless @noms.first.nil?
     render :show
   end
 

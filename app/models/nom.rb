@@ -29,5 +29,7 @@ class Nom < ActiveRecord::Base
     restaurants.businesses.each do |restaurant|
       noms << Nom.new(restaurant) unless restaurant.is_closed == true
     end
+    return noms
+    raise
   end
 end
