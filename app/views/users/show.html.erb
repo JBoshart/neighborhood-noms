@@ -1,2 +1,21 @@
 <h1>Hello, <%= current_user.name %>!</h1>
+<h2>Info about you!</h2>
+Name: <%= current_user.name %>
+Email: <%= current_user.email %>
+Neighborhood: <%= current_user.neighborhood %>
+Address: <%= current_user.address %>
+Street: <%= current_user.street %>
+City: <%= current_user.city %>
+State: <%= current_user.state %>
+Zip code: <%= current_user.zip %>
+
+<h2>Your Current Passports:</h2>
+Passports go here!
+
+<h2>Your Completed Passports:</h2>
+Completed ones go here!
+
+<h2>Your badges:</h2>
+Cool badges go here!
+
 <%= link_to "Update My User Profile", edit_user_path(current_user.id) %>

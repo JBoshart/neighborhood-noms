@@ -36,13 +36,6 @@ class MapsController < ApplicationController
 
     @map = Map.create(complete_nom_count: 0, incomplete_nom_count: params[:limit], total_nom_count: params[:limit], user_id: current_user.id)
 
-    raise
-
-    @new_noms[0].each do |nom|
-      Nom.create(name: nom.name, phone: nom.phone, address: nom.address, city: nom.city, zip: nom.zip, url: nom.url, image_url: nom.image_url, rating_value: nom.rating_value, rating_img_url: nom.rating_img_url, neighborhood: nom.neighborhood, map_id: @map.id)
-    end
-
-    raise
     render :show
   end
 
@@ -50,9 +43,5 @@ class MapsController < ApplicationController
 
   def maps_create_params
     params.permit(map: [:complete_nom_count, :incomplete_nom_count, :total_nom_count, :user_id])
-  end
-
-  def nom_create_params
-    params.permit(nom: [:name, :phone, :address, :city, :zip, :url, :image_url, :rating_value, :rating_img_url, :neighborhood, :map_id])
   end
 end
