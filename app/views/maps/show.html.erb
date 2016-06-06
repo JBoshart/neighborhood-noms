@@ -2,7 +2,8 @@
   <%= "There are no restaurants in that search! Try again with another parameter!" %>
 <% else %>
   <% @new_noms[0].each do |nom| %>
-    <%= nom.name %>
-    <%= nom.address %>
+    <br /><%= nom.name %>
+    <br /><%= nom.address %>
+    <br />
   <% end %>
 <% end %>
